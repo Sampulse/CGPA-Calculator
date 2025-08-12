@@ -1,1 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resources — Campus Tools & Tips</title>
+  <meta name="description" content="Useful resources for Nigerian university students — past questions, study planner downloads, recommended websites and exam tips." />
+  <style>
+    :root{
+      --primary1:#4a90e2;
+      --primary2:#50e3c2;
+      --accent:#9013fe;
+      --warm:#f5a623;
+      --bg:#f4f6f9;
+      --card:#fff;
+      --muted:#666;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      line-height:1.6;
+    }
 
+    header{
+      background: linear-gradient(-45deg, var(--primary1), var(--primary2), var(--accent), var(--warm));
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      padding: 28px 18px;
+      color:#fff;
+      text-align:center;
+    }
+    @keyframes gradientMove {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    header h1{margin:0;font-size:1.8rem}
+    header p{margin:6px 0 0; opacity:0.95; font-size:0.95rem}
+
+    nav{
+      background:#fff;
+      box-shadow:0 2px 4px rgba(0,0,0,0.06);
+      padding:10px 0;
+      text-align:center;
+    }
+    nav a{
+      color:var(--primary1);
+      margin:0 14px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:0.95rem;
+    }
+    nav a.active{color:#111}
+
+    .container{max-width:1000px;margin:20px auto;padding:0 16px}
+    .card{
+      background:var(--card);
+      border-radius:10px;
+      padding:20px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.06);
+      margin-bottom:18px;
+    }
+
+    h2{color:#0b3d91;margin-top:0}
+    h3{color:#333}
+    .muted{color:var(--muted)}
+    ul{margin-left:1.1rem}
+    .resource-grid{display:flex;flex-wrap:wrap;gap:14px}
+    .resource{flex:1 1 300px;background:#fff;padding:14px;border-radius:8px;border:1px solid #eef5ff;box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+    .resource h4{margin:0 0 8px}
+    .btn{display:inline-block;background:var(--primary1);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700;border:none;cursor:pointer}
+    .btn.secondary{background:#fff;color:var(--primary1);border:1px solid rgba(74,144,226,0.15)}
+    .btn.ghost{background:#f7fbff;color:var(--primary1);border:1px solid #e6f0ff}
+    .download-list{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .note{background:#fff7e6;padding:10px;border-radius:6px;border-left:4px solid var(--warm);margin:12px 0}
+    footer{background:#222;color:#fff;text-align:center;padding:14px;margin-top:20px;border-radius:8px}
+
+    @media (max-width:720px){
+      header h1{font-size:1.4rem}
+      .resource-grid{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Campus Tools & Tips — Resources</h1>
+    <p class="muted">Curated links, downloadable study planner, and guidance on where to get past questions and textbooks in Nigeria.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cgpa-calculator.html">CGPA Calculator</a>
+    <a href="study-tips.html">Study Tips</a>
+    <a href="resources.html" class="active">Resources</a>
+  </nav>
+
+  <div class="container">
+
+    <section class="card">
+      <h2>Featured Downloads</h2>
+      <p class="muted">Quick tools you can download and use immediately.</p>
+
+      <div class="download-list">
+        <button class="btn" onclick="downloadPlanner()">Download Study Planner (CSV)</button>
+        <button class="btn secondary" onclick="downloadChecklist()">Download Past-Questions Checklist (TXT)</button>
+        <a class="btn ghost" href="#" onclick="alert('Coming soon: printable formula sheets and note templates'); return false;">Printable Formula Sheet (Soon)</a>
+      </div>
+
+      <div class="note">
+        <strong>Tip:</strong> After downloading the planner, open it in Excel, Google Sheets, or your phone's spreadsheet app and fill your weekly timetable. Small consistent planning beats last-minute cramming.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Where to Find Past Questions & Textbooks (Legally)</h2>
+      <p class="muted">Past questions and textbooks are high-value resources—here's where to look and how to use them ethically.</p>
+
+      <div class="resource-grid">
+        <div class="resource">
+          <h4>Departmental Library & School Portal</h4>
+          <p>Most departments keep past questions and thesis/project reports in their library or on the departmental portal. Ask your departmental librarian or check notice boards and official pages.</p>
+        </div>
+
+        <div class="resource">
+          <h4>University e-Learning / LMS</h4>
+          <p>Many Nigerian universities (including NOUN, UNILAG, UNN, ABU) host course materials on an LMS. Always check your faculty or course page for lecture notes and sample tests.</p>
+        </div>
+
+        <div class="resource">
+          <h4>Seniors & Student Associations</h4>
+          <p>Soon-to-graduate students often have past questions and notes. Join your departmental forum or WhatsApp groups, but verify sources and avoid sharing copyrighted files without permission.</p>
+        </div>
+
+        <div class="resource">
+          <h4>Open Educational Resources</h4>
+          <p>Websites like Coursera, Khan Academy, and MIT OpenCourseWare offer free course content. Use them to supplement your understanding—but rely on departmental past questions for exam practice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Useful Online Links (Add your own links)</h2>
+      <p class="muted">Replace the placeholders below with your department's direct links if available.</p>
+      <ul>
+        <li><strong>JAMB</strong> — Check admissions & UTME info on the official portal.</li>
+        <li><strong>WAEC / NECO</strong> — Exam bodies for pre-university qualifications.</li>
+        <li><strong>National Universities Commission (NUC)</strong> — University regulations & accreditation info.</li>
+        <li><strong>University Portal</strong> — Your school’s official student portal (register, view results, download materials).</li>
+        <li><strong>Google Scholar</strong> — Search for academic papers relevant to your projects.</li>
+      </ul>
+
+      <p class="muted">If you want, I can add direct links (URLs) to these items — paste them and I'll insert them into the page for you.</p>
+    </section>
+
+    <section class="card">
+      <h2>How to Use Past Questions Effectively</h2>
+      <ol>
+        <li><b>Collect widely:</b> Get past questions for at least the last 5 years if possible.</li>
+        <li><b>Organize by topic:</b> Group questions by unit/topic so you can practice specific weaknesses.</li>
+        <li><b>Practice under exam conditions:</b> Time yourself and mark strictly.</li>
+        <li><b>Analyze mistakes:</b> Create an error log and revisit those topics in your notes.</li>
+        <li><b>Discuss with peers:</b> Use study groups to compare solutions and different approaches.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Recommended Apps & Tools</h2>
+      <div class="resource-grid">
+        <div class="resource">
+          <h4>Google Drive / OneDrive</h4>
+          <p>Backup lecture notes and assignments so you never lose work when your device fails.</p>
+        </div>
+        <div class="resource">
+          <h4>Quizlet / Anki</h4>
+          <p>Use flashcards and spaced-repetition for memorizing definitions and formulas.</p>
+        </div>
+        <div class="resource">
+          <h4>YouTube (Academic Channels)</h4>
+          <p>Search for university-level playlists in your subject (e.g., Engineering, Accounting, Biology).</p>
+        </div>
+        <div class="resource">
+          <h4>CGPA Calculator</h4>
+          <p>Use our calculator to simulate how different grades affect your cumulative CGPA.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Safety & Copyright — Be Responsible</h2>
+      <p class="muted">Avoid downloading or sharing pirated textbooks. Use official or open-access materials, borrow from libraries, and credit authors when using materials for assignments or projects.</p>
+      <p>If you want, I can add a "How to request past questions from your department" short template you can use to message your library or seniors.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2025 Campus Tools & Tips — Resources for Nigerian Students
+  </footer>
+
+<script>
+  // Download a sample study planner (CSV) and a past-questions checklist (TXT)
+  function downloadPlanner(){
+    const csv = [
+      ['Day','Time Slot','Course / Topic','Notes'],
+      ['Monday','07:00 - 09:00','',''],
+      ['Monday','10:00 - 12:00','',''],
+      ['Tuesday','07:00 - 09:00','',''],
+      ['Tuesday','10:00 - 12:00','',''],
+      ['Wednesday','07:00 - 09:00','',''],
+      ['Thursday','07:00 - 09:00','',''],
+      ['Friday','07:00 - 09:00',''],
+      ['Saturday','09:00 - 12:00',''],
+      ['Sunday','Plan / Review','']
+    ];
+    const csvContent = csv.map(r => r.map(c => `"${String(c).replace(/"/g,'""')}"`).join(',')).join('\\n');
+    const blob = new Blob([csvContent], {type: 'text/csv;charset=utf-8;'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'study-planner.csv';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  function downloadChecklist(){
+    const txt = [
+      'Past Questions Checklist',
+      '',
+      '- Course: ______________________',
+      '- Years collected: (e.g., 2018-2023) __________________',
+      '- Past questions location: (portal/library/senior) __________________',
+      '- Completed timed practice: Yes / No',
+      '- Notes log updated: Yes / No',
+      '',
+      'Repeat for each course.'
+    ].join('\\n');
+    const blob = new Blob([txt], {type:'text/plain;charset=utf-8;'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'past-questions-checklist.txt';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
+</script>
+
+</body>
+</html>
