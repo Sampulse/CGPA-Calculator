@@ -22,8 +22,6 @@
       color:#222;
       -webkit-font-smoothing:antialiased;
     }
-
-    /* Header / nav (matches your index style) */
     header{
       background: linear-gradient(-45deg, var(--primary1), var(--primary2), var(--accent), var(--warm));
       background-size:400% 400%;
@@ -39,7 +37,6 @@
     }
     header h1{margin:0;font-size:1.8rem}
     header p{margin:6px 0 0;opacity:0.95}
-
     nav{
       background:#fff;
       box-shadow:0 2px 4px rgba(0,0,0,0.06);
@@ -54,36 +51,26 @@
       font-size:0.95rem;
     }
     nav a.active{color:#111}
-
-    /* Main container */
     .container{max-width:1000px;margin:20px auto;padding:0 16px}
     .panel{background:var(--card-bg);border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,0.06);margin-bottom:18px}
-
     .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
     .btn{background:var(--primary1);color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
     .btn.ghost{background:#fff;color:var(--primary1);border:1px solid rgba(74,144,226,0.18)}
     .btn.warn{background:#f39c12}
-
     .sem-header{display:flex;align-items:center;justify-content:space-between;gap:10px}
     .sem-title{font-weight:700}
-
     table{width:100%;border-collapse:collapse;margin-top:12px}
     th,td{padding:10px;border:1px solid #e9eef4;text-align:center;font-size:0.95rem}
     input[type="text"], input[type="number"], select{
       width:100%;padding:8px;border:1px solid #dfe8f2;border-radius:6px;font-size:0.95rem;
     }
-
     .small{font-size:0.9rem;color:var(--muted)}
-
     .results{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
     .result-box{flex:1;min-width:180px;background:#f7fbff;padding:12px;border-radius:8px;border:1px solid #e6f0ff}
     .result-box strong{display:block;font-size:1.3rem;color:#0b3d91}
-
     .actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
     .ad-placeholder{border:1px dashed #d0d7e0;padding:12px;border-radius:8px;text-align:center;color:#64748b;background:#fff}
-
     footer{background:#222;color:#fff;padding:14px;text-align:center;margin-top:20px;border-radius:8px}
-
     @media (max-width:700px){
       header h1{font-size:1.4rem}
       th,td{font-size:0.85rem}
@@ -97,15 +84,12 @@
     <p class="small">Designed for Nigerian university grading (A=5 … F=0). Add semesters and courses, then calculate cumulative CGPA.</p>
   </header>
 
- <nav>
-  <a href="index.html">Home</a>
-  <a href="cgpa-calculator.html">CGPA Calculator</a>
-  <a href="study-tips.html">Study Tips</a>
-  <a href="resources.html">Resources</a>
-  <a href="about.html">About</a>
-  <a href="privacy.html">Privacy</a>
-</nav>
-
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cgpa-calculator.html" class="active">CGPA Calculator</a>
+    <a href="study-tips.html">Study Tips</a>
+    <a href="resources.html">Resources</a>
+  </nav>
 
   <div class="container">
     <!-- Controls -->
@@ -149,7 +133,8 @@
 
     </div>
 
-    
+    <div class="panel ad-placeholder small">Ad space — paste AdSense code here later (leave empty until you're approved)</div>
+
   </div>
 
   <footer>
@@ -157,13 +142,6 @@
   </footer>
 
 <script>
-/* CGPA calculator (Nigerian grading: A=5..F=0)
-   Features:
-    - multiple semesters (each with dynamic rows)
-    - calculate cumulative CGPA and per-semester GPA
-    - download results
-*/
-
 (function(){
   const semestersEl = document.getElementById('semesters');
   const addSemesterBtn = document.getElementById('addSemesterBtn');
@@ -208,9 +186,7 @@
               <th style="width:6%"></th>
             </tr>
           </thead>
-          <tbody class="course-body">
-            <!-- rows go here -->
-          </tbody>
+          <tbody class="course-body"></tbody>
         </table>
       </div>
     `;
@@ -247,7 +223,7 @@
     `;
     tbody.appendChild(tr);
     tr.querySelector('.grade').value = gradeToPoints(grade).toString();
-    // listeners
+
     tr.querySelector('.units').addEventListener('input', updateAll);
     tr.querySelector('.grade').addEventListener('change', updateAll);
     tr.querySelector('.remove').addEventListener('click', ()=>{ tr.remove(); updateAll(); });
@@ -256,13 +232,11 @@
   }
 
   function gradeToPoints(g){
-    // accept 'A'..'F' or numeric string already
     const up = String(g).toUpperCase();
     if(['A','B','C','D','E','F'].includes(up)){
       const map = {A:5,B:4,C:3,D:2,E:1,F:0};
       return map[up];
     }
-    // numeric fallback
     const n = parseFloat(g);
     if (!isNaN(n)) return n;
     return 0;
@@ -285,13 +259,11 @@
         semUnits += units;
         semQp += qp;
       });
-      // show per-semester summary
       const semSummary = semEl.querySelector(`#${semEl.id}-summary`);
       semSummary.textContent = semUnits > 0 ? `Units: ${semUnits} • QP: ${semQp.toFixed(2).replace(/\.00$/,'')} • GPA: ${ (semUnits>0 ? (semQp/semUnits).toFixed(2) : '0.00') }` : '';
       totalUnits += semUnits;
       totalQp += semQp;
 
-      // append per-semester result display for the results panel
       const box = document.createElement('div');
       box.style.padding='8px';
       box.style.borderBottom='1px dashed #eef5ff';
@@ -303,13 +275,6 @@
     totalQpEl.textContent = totalQp.toFixed(2).replace(/\.00$/,'');
     const cum = (totalUnits > 0) ? (totalQp / totalUnits) : 0;
     cumCgpaEl.textContent = cum.toFixed(2);
-
-  }
-
-  function calculateAll(){
-    // same as updateAll, but ensures result visible and maybe scrolls to result
-    updateAll();
-    cumCgpaEl.scrollIntoView({behavior:'smooth',block:'center'});
   }
 
   function downloadResult(){
@@ -345,13 +310,19 @@
   }
 
   function escapeHtml(s){
-    return String(s).replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',\"'\":\"&#39;\"}[m]; });
+    return String(s).replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m]; });
   }
 
-  // initial setup
-  addSemesterBtn.addEventListener('click', ()=>createSemester());
-  resetBtn.addEventListener('click', ()=>{ if(confirm('Reset all semesters and courses?')){ semestersEl.innerHTML=''; semCount=0; createSemester(); updateAll(); } });
-  calcBtn.addEventListener('click', calculateAll);
+  addSemesterBtn.addEventListener('click', ()=>{ createSemester(); });
+  resetBtn.addEventListener('click', ()=>{
+    if(confirm('Reset all semesters and courses?')){
+      semestersEl.innerHTML='';
+      semCount=0;
+      createSemester();
+      updateAll();
+    }
+  });
+  calcBtn.addEventListener('click', ()=>{ updateAll(); cumCgpaEl.scrollIntoView({behavior:'smooth',block:'center'}); });
   downloadBtn.addEventListener('click', downloadResult);
   helpBtn.addEventListener('click', ()=>{ alert('Add one or more semesters. For each semester add course rows, enter units and pick grade (A-F). Click "Calculate CGPA" to see semester GPAs and cumulative CGPA.'); });
 
