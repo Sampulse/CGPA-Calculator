@@ -1,1 +1,323 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Study Tips — Campus Tools & Tips</title>
+  <meta name="description" content="Practical, Nigeria-focused study tips for university students — how to study smart, improve CGPA, use past questions and balance campus life." />
+  <style>
+    :root{
+      --primary1:#4a90e2;
+      --primary2:#50e3c2;
+      --accent:#9013fe;
+      --warm:#f5a623;
+      --bg:#f4f6f9;
+      --card:#ffffff;
+      --muted:#666;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      line-height:1.6;
+    }
 
+    header{
+      background: linear-gradient(-45deg, var(--primary1), var(--primary2), var(--accent), var(--warm));
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      padding: 28px 18px;
+      color:#fff;
+      text-align:center;
+    }
+    @keyframes gradientMove {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    header h1{margin:0;font-size:1.8rem}
+    header p{margin:6px 0 0; opacity:0.95; font-size:0.95rem}
+
+    nav{
+      background:#fff;
+      box-shadow:0 2px 4px rgba(0,0,0,0.06);
+      padding:10px 0;
+      text-align:center;
+    }
+    nav a{
+      color:var(--primary1);
+      margin:0 14px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:0.95rem;
+    }
+    nav a.active{color:#111}
+
+    .container{max-width:1000px;margin:20px auto;padding:0 16px}
+    .card{
+      background:var(--card);
+      border-radius:10px;
+      padding:20px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.06);
+      margin-bottom:18px;
+    }
+
+    h2{color:#0b3d91;margin-top:0}
+    h3{color:#333}
+    .muted{color:var(--muted)}
+    ul{margin-left:1.1rem}
+    ol{margin-left:1.1rem}
+    p.lead{font-size:1.05rem;color:#333}
+
+    .tip{
+      background:#f7fbff;
+      border-left:4px solid var(--primary1);
+      padding:12px 14px;
+      margin:12px 0;
+      border-radius:6px;
+    }
+
+    .example{
+      background:#fff7e6;
+      border-left:4px solid var(--warm);
+      padding:12px 14px;
+      border-radius:6px;
+      margin:12px 0;
+    }
+
+    footer{
+      background:#222;
+      color:#fff;
+      text-align:center;
+      padding:14px;
+      margin-top:20px;
+      border-radius:8px;
+    }
+
+    @media (max-width:720px){
+      header h1{font-size:1.4rem}
+      .container{padding:0 12px}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎓 Campus Tools & Tips — Study Tips</h1>
+    <p class="muted">Practical, Nigeria-focused strategies to help you improve your grades and raise your CGPA.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cgpa-calculator.html">CGPA Calculator</a>
+    <a href="study-tips.html" class="active">Study Tips</a>
+    <a href="resources.html">Resources</a>
+  </nav>
+
+  <div class="container">
+    <article class="card">
+      <h2>Ultimate Study Tips for Nigerian University Students</h2>
+      <p class="lead">This guide is written specifically for students in Nigerian universities and polytechnics. It focuses on practical, proven methods you can use during the semester to study smarter, improve exam performance, and raise your CGPA without burning out.</p>
+
+      <h3>Introduction — Why studying smart matters</h3>
+      <p>
+        University is different from secondary school. Lectures are faster, assessments count more, and most learning is self-directed. In Nigeria, where competition for scholarships, good postings, and graduate jobs is intense, your CGPA matters. But you don’t need to study longer hours to improve—study smarter.
+      </p>
+
+      <div class="tip">
+        <strong>Quick takeaway:</strong> Small consistent improvements (better planning, using past questions, focused revision) lift your CGPA more than random late-night cramming.
+      </div>
+
+      <h3>1. PUT GOD FIRST, Understand your academic calendar and course outline</h3>
+      <p>
+        At the start of every semester, make two quick checks: (1) Always PUT GOD FIRST; (2) download your department's course outlines and continuous assessment schedule; (3) note the dates for tests, assignments, and the main exams. Most Nigerian departments publish course outlines (syllabus) that show the topics, recommended readings, assessment split and marking scheme.
+      </p>
+      <ul>
+        <li>Highlight high-unit courses — they affect CGPA more.</li>
+        <li>Plan around test and assignment deadlines; set reminders on your phone.</li>
+        <li>If a lecturer posts materials on a portal (e.g., departmental site or LMS), download them immediately.</li>
+      </ul>
+
+      <h3>2. Set realistic, measurable goals each semester</h3>
+      <p>
+        Don’t aim vaguely to “get better.” Set a clear CGPA or GPA target and break it into course-level goals. For example: “This semester I want a minimum of 3.50 overall. For Course X (4 units) I must score at least an A or B.”
+      </p>
+      <ol>
+        <li>Compute the grade improvements needed to hit your target using a CGPA calculator.</li>
+        <li>Prioritise courses by unit and difficulty: invest more study time on 3–5 high-unit or borderline courses.</li>
+      </ol>
+
+      <h3>3. Time management — build and protect your timetable</h3>
+      <p>
+        Time is the single resource students waste most. Use a weekly timetable and block out time for lectures, study sessions, assignments, and rest. In universities in Nigeria, where lecturers sometimes change schedules, be flexible but disciplined.
+      </p>
+      <ul>
+        <li><strong>Morning block (2 hours):</strong> review lecture notes, do focused reading.</li>
+        <li><strong>Afternoon block (2 hours):</strong> practicals, assignments, group study.</li>
+        <li><strong>Evening block (1–2 hours):</strong> revision, practice questions.</li>
+      </ul>
+      <div class="example">
+        <strong>Example:</strong> If you have 3 high-unit courses, assign repeat weekly slots: Mon 7–9pm (Course A), Wed 7–9pm (Course B), Fri 7–9pm (Course C). Protect those slots—no social media during them.
+      </div>
+
+      <h3>4. Effective reading techniques</h3>
+      <p>
+        Replace passive reading with active methods. Reading notes quickly without engaging won’t help you recall during exams. Use the SQ3R method (Survey, Question, Read, Recite, Review) and summarise after each lecture.
+      </p>
+      <ul>
+        <li><strong>Survey:</strong> skim headings, summaries, and key formulas.</li>
+        <li><strong>Question:</strong> turn headings into questions (e.g., “How does Ohm’s law apply?”).</li>
+        <li><strong>Read:</strong> read deliberately to answer the questions.</li>
+        <li><strong>Recite:</strong> say the answers in your own words or write a short note.</li>
+        <li><strong>Review:</strong> re-check after 24–48 hours.</li>
+      </ul>
+
+      <h3>5. Take better notes in lectures</h3>
+      <p>
+        Lecturers in Nigerian universities often give clues to what will appear in exams. Notes are not just transcription—they are your study map.
+      </p>
+      <ul>
+        <li>Write lecture date, topic, and key points at the top of each page.</li>
+        <li>Use symbols and abbreviations (e.g., “→” for leads to, “eg” for example).</li>
+        <li>Adopt a simple structure: heading, bullets, example, formula, short summary.</li>
+        <li>After class, spend 10–15 minutes cleaning and summarising your notes.</li>
+      </ul>
+
+      <h3>6. Use past questions — they are gold</h3>
+      <p>
+        Past questions show exam patterns and frequently tested topics. Nigerian university departments tend to recycle or adapt past questions, so practicing them is a high-return activity.
+      </p>
+      <ol>
+        <li>Collect past questions for your course (departmental library, seniors, online groups).</li>
+        <li>Practice under timed conditions.</li>
+        <li>Grade yourself strictly and review mistakes—note them and revisit the topic.</li>
+      </ol>
+      <div class="tip">
+        <strong>Pro tip:</strong> One week before exams, solve 2–3 past papers per day for each major course. Focus on recurring question types.
+      </div>
+
+      <h3>7. Group study — make it purposeful</h3>
+      <p>
+        Study groups can boost understanding if organized well. Avoid noisy groups that become social clubs. A purposeful group has a short agenda, rotates leadership, and focuses on problem-solving.
+      </p>
+      <ul>
+        <li>Limit group size to 3–6 students.</li>
+        <li>Set a clear agenda (e.g., “We will solve 5 past questions on Topic X”).</li>
+        <li>Assign roles: presenter, timekeeper, note-taker.</li>
+      </ul>
+
+      <h3>8. Use available university resources</h3>
+      <p>
+        Nigerian universities provide resources—libraries, past question archives, lecturers’ office hours, departmental notice boards. Use them.
+      </p>
+      <ul>
+        <li>Visit lecturers during office hours with specific questions.</li>
+        <li>Borrow recommended textbooks from the library instead of relying solely on photocopies.</li>
+        <li>Subscribe to departmental WhatsApp groups where announcements and notes are shared, but mute social chatter.</li>
+      </ul>
+
+      <h3>9. Study techniques that actually work</h3>
+      <p>
+        Apply proven cognitive strategies rather than re-reading notes. Techniques below are inexpensive but effective.
+      </p>
+      <ul>
+        <li><strong>Active recall:</strong> test yourself frequently instead of rereading.</li>
+        <li><strong>Spaced repetition:</strong> review material multiple times with increasing gaps (1 day, 3 days, 7 days).</li>
+        <li><strong>Interleaving:</strong> mix problem types during practice instead of doing all similar problems at once.</li>
+        <li><strong>Teach someone:</strong> explain a concept to a friend—teaching reveals gaps in your understanding.</li>
+      </ul>
+
+      <h3>10. Prepare smartly for exams</h3>
+      <p>
+        The last two weeks before exams should be structured practice, not last-minute reading.
+      </p>
+      <ol>
+        <li><strong>Two weeks before:</strong> finish core readings, practice past papers, compile formula/definition sheets.</li>
+        <li><strong>One week before:</strong> do timed past papers, revise weaknesses, summarise difficult topics.</li>
+        <li><strong>Night before:</strong> review summary sheets, sleep well, and avoid learning new material.</li>
+      </ol>
+
+      <h3>11. Balance academics and campus life</h3>
+      <p>
+        Campus life matters—networking, faith, clubs—but balance is critical. Your CGPA is built by small, repeating choices.
+      </p>
+      <ul>
+        <li>Choose 1–2 extracurriculars that add value; don’t overload yourself.</li>
+        <li>Keep healthy habits: 6–8 hours sleep, regular meals, and short daily exercise.</li>
+        <li>Use campus counselling services if you feel overwhelmed.</li>
+      </ul>
+
+      <h3>12. Avoid common mistakes that lower CGPA</h3>
+      <p>
+        Preventable behaviours often cause the biggest grade drops.
+      </p>
+      <ul>
+        <li>Don’t skip tests because notes are online—attendance and continuous assessment usually matter.</li>
+        <li>Avoid copying assignments from others—learn the concept and submit original work.</li>
+        <li>Don’t wait until results are out to seek help—address weak areas early.</li>
+      </ul>
+
+      <h3>13. Use technology wisely</h3>
+      <p>
+        Technology can help if used properly.
+      </p>
+      <ul>
+        <li>Use Google Drive or Dropbox for backup of notes and assignments.</li>
+        <li>Use Quizlet or Anki for flashcards and spaced repetition.</li>
+        <li>Use YouTube for topic tutorials (search for university-level playlists and departmental channels).</li>
+        <li>Use your CGPA calculator regularly to simulate scenarios — know how many As you need to hit a target CGPA.</li>
+      </ul>
+
+      <h3>14. Mental health and staying motivated</h3>
+      <p>
+        Academic performance and mental health are linked. If stress becomes crippling, seek help. Speak to friends, mentors, or campus counsellors. Keep perspective: a CGPA is important but not worth your health.
+      </p>
+      <div class="example">
+        <strong>Small habit:</strong> Start each study session with a two-minute breathing exercise—this improves focus and calms anxiety.
+      </div>
+
+      <h3>15. A simple weekly routine that works</h3>
+      <p>
+        Here’s a practical weekly routine you can adapt:
+      </p>
+      <ol>
+        <li><strong>Sunday:</strong> Plan the week, check deadlines, download materials.</li>
+        <li><strong>Monday–Friday:</strong> Attend lectures, review notes for 30 minutes after class.</li>
+        <li><strong>Wednesday:</strong> Group study or problem session (1–2 hours).</li>
+        <li><strong>Saturday:</strong> Do past questions, revise weak topics, prepare for the next week.</li>
+      </ol>
+
+      <h3>16. Final exam blueprint</h3>
+      <p>
+        Two weeks out, move from learning to applying:
+      </p>
+      <ul>
+        <li>Make a two-week revision timetable by course and topic.</li>
+        <li>Practice past questions under timed conditions and mark them strictly.</li>
+        <li>Make a final quick-review sheet of definitions, formulas, and key concepts.</li>
+      </ul>
+
+      <h3>Conclusion — Start small and be consistent</h3>
+      <p>
+        The best study strategy is one you will actually follow. Start with a simple timetable, use past questions, protect high-value study time, and test yourself regularly. Over a semester, these small changes compound—your CGPA will reflect that effort.
+      </p>
+
+      <div class="tip">
+        <strong>Final encouragement:</strong> Improving your CGPA is not magic. It is consistent effort, the right techniques, and good planning. Start today: outline your week, collect past questions, and plan a timed practice session.
+      </div>
+
+      <p class="muted" style="margin-top:12px">If you want, I can convert this into a printable PDF or split it into short posts for your blog. I can also add share buttons and examples for specific departments (Engineering, Education, Law, etc.).</p>
+    </article>
+  </div>
+
+  <footer>
+    © 2025 Campus Tools & Tips — Study Tips for Nigerian Students
+  </footer>
+
+</body>
+</html>
+```
