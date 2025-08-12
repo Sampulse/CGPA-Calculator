@@ -22,7 +22,7 @@
       background:var(--bg);
       color:#222;
       -webkit-font-smoothing:antialiased;
-      line-height:1.6;
+      line-height:1.7;
     }
 
     header{
@@ -79,6 +79,10 @@
     .note{background:#fff7e6;padding:10px;border-radius:6px;border-left:4px solid var(--warm);margin:12px 0}
     footer{background:#222;color:#fff;text-align:center;padding:14px;margin-top:20px;border-radius:8px}
 
+    .lead {font-size:1rem;color:#1f2937}
+    .section-intro {margin-bottom:12px}
+    .highlight {background:#eef7ff;padding:10px;border-radius:6px;border-left:4px solid var(--primary1);margin:12px 0}
+
     @media (max-width:720px){
       header h1{font-size:1.4rem}
       .resource-grid{flex-direction:column}
@@ -89,7 +93,7 @@
 
   <header>
     <h1>📚 Campus Tools & Tips — Resources</h1>
-    <p class="muted">Curated links, downloadable study planner, and guidance on where to get past questions and textbooks in Nigeria.</p>
+    <p class="muted">Curated downloads and practical guidance for Nigerian university students.</p>
   </header>
 
   <nav>
@@ -103,97 +107,127 @@
 
     <section class="card">
       <h2>Featured Downloads</h2>
-      <p class="muted">Quick tools you can download and use immediately.</p>
+      <p class="muted section-intro">Practical files you can download and use right away to plan and track your study time and past-question practice.</p>
 
       <div class="download-list">
         <button class="btn" onclick="downloadPlanner()">Download Study Planner (CSV)</button>
         <button class="btn secondary" onclick="downloadChecklist()">Download Past-Questions Checklist (TXT)</button>
-        <a class="btn ghost" href="#" onclick="alert('Coming soon: printable formula sheets and note templates'); return false;">Printable Formula Sheet (Soon)</a>
+        <button class="btn ghost" onclick="downloadFormula()">Download Printable Formula Sheet (TXT)</button>
       </div>
 
       <div class="note">
-        <strong>Tip:</strong> After downloading the planner, open it in Excel, Google Sheets, or your phone's spreadsheet app and fill your weekly timetable. Small consistent planning beats last-minute cramming.
+        <strong>How to use these files:</strong>
+        <ul>
+          <li><b>Study planner (CSV):</b> Open with Excel, Google Sheets or a phone spreadsheet app. Fill in your course names and weekly time slots. Use it to block focused study time each week and export to PDF for printing.</li>
+          <li><b>Past-questions checklist:</b> Track which years and topics you have practiced for each course and where you stored the question set (department, senior, online).</li>
+          <li><b>Formula sheet (TXT):</b> A printable text file containing common formulas and quick revision notes—copy into a Word document and print for exam-day quick review.</li>
+        </ul>
       </div>
     </section>
 
     <section class="card">
       <h2>Where to Find Past Questions & Textbooks (Legally)</h2>
-      <p class="muted">Past questions and textbooks are high-value resources—here's where to look and how to use them ethically.</p>
+      <p class="lead">Past questions and textbooks are among the most valuable study assets for Nigerian students. They reveal exam patterns, common question words, and emphasis areas. Use the sources below and rely on department-issued materials for the most relevant practice.</p>
 
       <div class="resource-grid">
         <div class="resource">
-          <h4>Departmental Library & School Portal</h4>
-          <p>Most departments keep past questions and thesis/project reports in their library or on the departmental portal. Ask your departmental librarian or check notice boards and official pages.</p>
-        </div>
-
-        <div class="resource">
-          <h4>University e-Learning / LMS</h4>
-          <p>Many Nigerian universities (including NOUN, UNILAG, UNN, ABU) host course materials on an LMS. Always check your faculty or course page for lecture notes and sample tests.</p>
+          <h4>Departmental Library & Course Portal</h4>
+          <p>Most departments keep past questions, seminar reports, project abstracts, and thesis in their library or on an internal portal. Visit the library and request copies of past questions for your specific course codes. If your faculty has an e-portal or LMS, download lecture slides and sample tests from the course pages.</p>
         </div>
 
         <div class="resource">
           <h4>Seniors & Student Associations</h4>
-          <p>Soon-to-graduate students often have past questions and notes. Join your departmental forum or WhatsApp groups, but verify sources and avoid sharing copyrighted files without permission.</p>
+          <p>Seniors often keep clean collections of past questions and notes. Join your departmental WhatsApp or Telegram groups and ask politely for past questions, then verify their origin. When seniors lend scanned notes, store them in your Drive for easy access.</p>
         </div>
 
         <div class="resource">
-          <h4>Open Educational Resources</h4>
-          <p>Websites like Coursera, Khan Academy, and MIT OpenCourseWare offer free course content. Use them to supplement your understanding—but rely on departmental past questions for exam practice.</p>
+          <h4>University Digital Library & Open Access Repositories</h4>
+          <p>Many universities provide e-journals and digital repository access for registered students. Use your university library portal to search textbooks and journals. Open-access sites like Google Scholar, DOAJ, and institutional repositories are excellent for background reading and research references.</p>
+        </div>
+
+        <div class="resource">
+          <h4>Legitimate Online Marketplaces</h4>
+          <p>Sites that sell past questions and notes may be convenient but verify the seller’s credibility. Prefer materials shared by recognized student associations, departmental pages, or official university outlets to avoid incorrect or incomplete question sets.</p>
         </div>
       </div>
-    </section>
-
-    <section class="card">
-      <h2>Useful Online Links (Add your own links)</h2>
-      <p class="muted">Replace the placeholders below with your department's direct links if available.</p>
-      <ul>
-        <li><strong>JAMB</strong> — Check admissions & UTME info on the official portal.</li>
-        <li><strong>WAEC / NECO</strong> — Exam bodies for pre-university qualifications.</li>
-        <li><strong>National Universities Commission (NUC)</strong> — University regulations & accreditation info.</li>
-        <li><strong>University Portal</strong> — Your school’s official student portal (register, view results, download materials).</li>
-        <li><strong>Google Scholar</strong> — Search for academic papers relevant to your projects.</li>
-      </ul>
-
-      <p class="muted">If you want, I can add direct links (URLs) to these items — paste them and I'll insert them into the page for you.</p>
     </section>
 
     <section class="card">
       <h2>How to Use Past Questions Effectively</h2>
+      <p class="lead">Collecting past questions is not enough. You must practice them strategically to turn them into higher scores. Below is a tested method used by top students across Nigerian universities.</p>
       <ol>
-        <li><b>Collect widely:</b> Get past questions for at least the last 5 years if possible.</li>
-        <li><b>Organize by topic:</b> Group questions by unit/topic so you can practice specific weaknesses.</li>
-        <li><b>Practice under exam conditions:</b> Time yourself and mark strictly.</li>
-        <li><b>Analyze mistakes:</b> Create an error log and revisit those topics in your notes.</li>
-        <li><b>Discuss with peers:</b> Use study groups to compare solutions and different approaches.</li>
+        <li><strong>Collect and organize:</strong> For each course, gather at least 5 years of past questions. Label files by year and course code and store them in folders (Drive or local).</li>
+        <li><strong>Topic mapping:</strong> Read the course outline and map questions to topics. This helps you identify which topics are frequently tested.</li>
+        <li><strong>Timed practice:</strong> Simulate exam conditions—time yourself, sit in a quiet place, and avoid notes during the run. Mark strictly and record missed items.</li>
+        <li><strong>Error log:</strong> Keep an errors spreadsheet. For every wrong answer note the topic, your mistake, and an action (re-read chapter, ask lecturer, practice more).</li>
+        <li><strong>Progress check:</strong> Re-attempt past papers after 1 week and 3 weeks to ensure the knowledge sticks (spaced repetition).</li>
       </ol>
+      <div class="highlight"><strong>Practical result:</strong> Students who practice past questions consistently report faster question recognition, better time management in exams, and improved final scores.</div>
     </section>
 
     <section class="card">
-      <h2>Recommended Apps & Tools</h2>
+      <h2>Recommended Online Resources and Tools</h2>
+      <p class="lead">The internet can supercharge your study when used well. Use the following platforms to supplement departmental materials and deepen understanding.</p>
+
       <div class="resource-grid">
         <div class="resource">
-          <h4>Google Drive / OneDrive</h4>
-          <p>Backup lecture notes and assignments so you never lose work when your device fails.</p>
+          <h4>Google Scholar & ResearchGate</h4>
+          <p>Find academic papers, articles and conference papers relevant to your projects and assignments.</p>
+        </div>
+        <div class="resource">
+          <h4>Khan Academy & Coursera</h4>
+          <p>Use topic videos and structured courses to strengthen fundamentals, especially in Maths, Statistics and basic engineering concepts.</p>
+        </div>
+        <div class="resource">
+          <h4>YouTube Academic Channels</h4>
+          <p>Search for university-level playlists and verified lecturers’ channels for explanations and worked examples.</p>
         </div>
         <div class="resource">
           <h4>Quizlet / Anki</h4>
-          <p>Use flashcards and spaced-repetition for memorizing definitions and formulas.</p>
-        </div>
-        <div class="resource">
-          <h4>YouTube (Academic Channels)</h4>
-          <p>Search for university-level playlists in your subject (e.g., Engineering, Accounting, Biology).</p>
-        </div>
-        <div class="resource">
-          <h4>CGPA Calculator</h4>
-          <p>Use our calculator to simulate how different grades affect your cumulative CGPA.</p>
+          <p>Create flashcards and use spaced repetition for memorizing definitions, formulas and key facts.</p>
         </div>
       </div>
     </section>
 
     <section class="card">
-      <h2>Safety & Copyright — Be Responsible</h2>
-      <p class="muted">Avoid downloading or sharing pirated textbooks. Use official or open-access materials, borrow from libraries, and credit authors when using materials for assignments or projects.</p>
-      <p>If you want, I can add a "How to request past questions from your department" short template you can use to message your library or seniors.</p>
+      <h2>Organize Your Study Materials — A Step-by-Step System</h2>
+      <p class="lead">Organization saves time. Follow this simple workflow:</p>
+      <ol>
+        <li><strong>Create a master folder</strong> (Drive or local) with subfolders for each course code.</li>
+        <li><strong>Store lecture notes, slides and readings</strong> in the course folder and name files by date and topic (e.g., MTH101_Week3_Integration.pdf).</li>
+        <li><strong>Keep a question folder</strong> with past papers and model answers organized by year.</li>
+        <li><strong>Maintain a revision index</strong> (one page per course) listing high-yield topics and the locations of notes and videos.</li>
+      </ol>
+      <p>This system reduces wasted time and ensures you always find the right materials when preparing for a test.</p>
+    </section>
+
+    <section class="card">
+      <h2>Study Planner — How to Use the CSV Effectively</h2>
+      <p class="lead">Download the study planner CSV, then do the following:</p>
+      <ol>
+        <li>Open in Google Sheets or Excel.</li>
+        <li>Fill course names in the Course/Topic column.</li>
+        <li>Block 1–2 hour focused sessions in the Time Slot column for important topics.</li>
+        <li>Review and adjust weekly; aim for five focused study blocks per week for each high-unit course.</li>
+      </ol>
+      <p>Small consistent study sessions beat occasional marathon cramming. Use the planner to track actual hours studied against planned hours.</p>
+    </section>
+
+    <section class="card">
+      <h2>Copyright & Ethical Use</h2>
+      <p class="lead">Respect intellectual property. Do not upload or share paid textbooks illegally. Use open educational resources, borrow books from the library, and credit authors in assignments. When obtaining past questions from seniors, confirm their authenticity with the department or library.</p>
+    </section>
+
+    <section class="card">
+      <h2>Quick Reference — Useful Links</h2>
+      <ul>
+        <li><strong>JAMB:</strong> https://www.jamb.gov.ng/</li>
+        <li><strong>National Universities Commission (NUC):</strong> https://www.nuc.edu.ng/</li>
+        <li><strong>Google Scholar:</strong> https://scholar.google.com/</li>
+        <li><strong>Coursera:</strong> https://www.coursera.org/</li>
+        <li><strong>Khan Academy:</strong> https://www.khanacademy.org/</li>
+      </ul>
+      <p class="muted">Replace these with direct links to your university portal or departmental pages if you have them; they are often the most accurate and useful sources for course-specific materials.</p>
     </section>
 
   </div>
@@ -246,6 +280,39 @@
     const a = document.createElement('a');
     a.href = url;
     a.download = 'past-questions-checklist.txt';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  function downloadFormula(){
+    const txt = [
+      'Printable Formula Sheet',
+      '',
+      '--- Mathematics / Calculus ---',
+      'Derivative of x^n: n*x^(n-1)',
+      'Integral of x^n: x^(n+1)/(n+1) + C',
+      '',
+      '--- Physics ---',
+      'Ohm\'s law: V = I * R',
+      'Kinetic energy: (1/2) m v^2',
+      '',
+      '--- Statistics ---',
+      'Mean: sum(x)/n',
+      'Standard deviation (sample): sqrt( sum( (x - mean)^2 ) / (n-1) )',
+      '',
+      '--- Accounting ---',
+      'Basic accounting equation: Assets = Liabilities + Owner\'s Equity',
+      '',
+      '--- Tips ---',
+      'Copy this into a Word doc, format as 2 columns, then print for quick revision.'
+    ].join('\\n');
+    const blob = new Blob([txt], {type:'text/plain;charset=utf-8;'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'formula-sheet.txt';
     document.body.appendChild(a);
     a.click();
     a.remove();
