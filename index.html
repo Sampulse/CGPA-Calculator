@@ -3,24 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Easily calculate your CGPA online with our free CGPA Calculator for university students." />
-  <meta name="keywords" content="CGPA Calculator, GPA Calculator, University Students, Education Tool" />
-  <meta name="author" content="Your Name" />
-  <title>CGPA Calculator - For University Students</title>
+  <meta name="description" content="Free online CGPA Calculator for university students. Calculate your grades instantly and track your academic performance with ease." />
+  <title>CGPA Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>CGPA Calculator</h1>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Calculate Your CGPA Instantly</h2>
+      <p>Use our free online CGPA calculator to track your academic performance and plan for success.</p>
+      <a href="calculator.html" class="cta-button">Start Calculating</a>
+    </section>
+
+    <!-- Reserved space for AdSense (future) -->
+    <div id="ad-space" style="margin: 20px auto; text-align: center;"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CGPA Calculator. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Optional animation to draw attention to the button
+    const btn = document.querySelector('.cta-button');
+    setInterval(() => {
+      btn.classList.toggle('bounce');
+    }, 1500);
+  </script>
+
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      color: white;
-      background: linear-gradient(-45deg, #1e3c72, #2a5298, #0f2027, #203a43);
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(-45deg, #ffcc00, #ff6699, #66ccff, #99ff99);
       background-size: 400% 400%;
-      animation: gradientBG 10s ease infinite;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      animation: gradientBG 15s ease infinite;
+      color: #333;
       text-align: center;
+    }
+
+    header {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .intro {
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 500px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #ffb300;
+      transform: scale(1.05);
+    }
+
+    .bounce {
+      animation: bounceAnim 0.6s ease;
+    }
+
+    footer {
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.8);
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
 
     @keyframes gradientBG {
@@ -29,44 +92,13 @@
       100% { background-position: 0% 50%; }
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      max-width: 500px;
-      margin: 0 auto 20px;
-    }
-
-    a.button {
-      background: #ffcc00;
-      color: black;
-      padding: 12px 20px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    a.button:hover {
-      background: #ffaa00;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.9rem;
-      opacity: 0.7;
+    @keyframes bounceAnim {
+      0% { transform: translateY(0); }
+      30% { transform: translateY(-5px); }
+      50% { transform: translateY(0); }
+      70% { transform: translateY(-3px); }
+      100% { transform: translateY(0); }
     }
   </style>
-</head>
-<body>
-  <h1>Welcome to CGPA Calculator</h1>
-  <p>Calculate your CGPA quickly and accurately with our easy-to-use tool, designed for university students.</p>
-  <a href="calculator.html" class="button">Start Calculating</a>
-
-  <footer>&copy; 2025 CGPA Calculator. All rights reserved.</footer>
 </body>
 </html>
