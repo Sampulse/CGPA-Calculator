@@ -1,77 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Christian Diary – Soul-inspiring long-form Christian stories to uplift your spirit and strengthen your faith.">
-  <title>Christian Diary</title>
-  
-  <!-- Google AdSense Auto Ads -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-3253581979430606" crossorigin="anonymous"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Calculate your CGPA instantly with our easy-to-use University CGPA Calculator. Perfect for students in all universities. Track grades, improve performance, and plan your academic success.">
+  <title>University CGPA Calculator</title>
   <style>
     body {
       margin: 0;
-      font-family: Georgia, serif;
-      color: white;
-      text-align: center;
-      background: linear-gradient(-45deg, #1e3c72, #2a5298, #3b5998, #192f6a);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff6a00, #ff0000);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
+      color: white;
+      text-align: center;
     }
-
     @keyframes gradientBG {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
-    header {
-      padding: 50px 20px 20px;
-      font-size: 2.5rem;
-      font-weight: bold;
+    h1 {
+      font-size: 2.5em;
+      margin-top: 15%;
     }
-
-    p {
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 1.2rem;
-      line-height: 1.6;
+    .typing {
+      border-right: 3px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(30, end), blink 0.5s step-end infinite alternate;
     }
-
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: white; }
+    }
     a.button {
       display: inline-block;
-      background: #fff;
-      color: #1e3c72;
-      padding: 12px 25px;
+      padding: 15px 25px;
       margin-top: 20px;
+      font-size: 1.2em;
+      color: white;
+      background: #ff6a00;
+      border-radius: 8px;
       text-decoration: none;
-      font-weight: bold;
-      border-radius: 25px;
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: transform 0.2s ease-in-out;
     }
-
     a.button:hover {
-      background: #1e3c72;
-      color: #fff;
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #ccc;
+      transform: scale(1.1);
+      background: #ff4500;
     }
   </style>
 </head>
 <body>
+  <h1 class="typing">Welcome to Your CGPA Calculator</h1>
+  <p>Track your academic progress and plan for success</p>
+  <a href="calculator.html" class="button">Start Calculating</a>
 
-  <header>Christian Diary</header>
-  <p>Welcome to Christian Diary — a home for soul-inspiring stories that will uplift your spirit, deepen your faith, and draw you closer to God.</p>
-  
-  <a href="stories/tobi.html" class="button">Read Our Stories</a>
-
-  <footer>© 2025 Christian Diary. All rights reserved.</footer>
-
+  <script>
+    // Future: Add JS interactivity here
+  </script>
 </body>
 </html>
